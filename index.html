@@ -13,7 +13,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
-        <title>DHS.Workstation-web /Graphics / Video-All Resolution</title>
+        <title>郭維安的個人空間</title>
         <style>
             #logo {
                 width: 80px;
@@ -97,10 +97,10 @@
                 z-index: -1;
                 border-left: 1px solid rgba(200, 200, 200, 0.2);
                 background-color: lightcyan;
-            }
+            } /*10個css style的傾斜模塊設計*/
             .clearResize {
                 resize: none;
-            }
+            } /*清除textarea使用者可變動區塊大小之設定*/
             .iconstyle {
                 height: 45px;
                 width: 45px;
@@ -108,39 +108,41 @@
                 border: 1px solid #fff;
                 line-height: 45px;
                 text-align: center;
-            }
+            } /*製作圓形Logo框 並把其中文字置中*/
             #bgline {
                 width: 50%;
                 height: 100%;
                 border-right: 1px solid #ccc;
                 position: fixed;
                 z-index: -1;
-            }
+            } /*貫穿背景的置中直線*/
             input[placeholder]::-webkit-input-placeholder {
                 /* Chrome/Opera/Safari */
                 color: white;
                 text-align: center;
-            }
+            } /*input的placeholder內字體樣式設計*/
             textarea[placeholder]::-webkit-input-placeholder {
                 color: white;
                 text-align: center;
-            }
+            } /*textarea的placeholder內字體樣式設計*/
+
             /* input[placeholder]::-moz-placeholder { / Firefox 19+ /color: white;} */
             /* input[placeholder]:-ms-input-placeholder { / IE 10+ /color: white;} */
         </style>
         <script type="text/javascript">
             function send() {
                 var nameElement = document.getElementById('nameinput');
-                var name = nameElement.value;
+                //取得檔案中ID"nameinput"的內容 定義為"nameElement"
+                var name = nameElement.value; //將"nameElement"的內容 定義為"name"
                 var emailElement = document.getElementById('emailinput');
                 var email = emailElement.value;
                 var msgElement = document.getElementById('msginput');
                 var msg = msgElement.value;
-                // alert(name+email+msg);
                 if (name == '' || email == '' || msg == '' || email.indexOf('@') == -1) {
-                    alert('請輸入訊息');
-                    location.href = 'index.html#board';
-                } else {
+                    alert('請輸入訊息'); //彈出式視窗
+                    location.href = 'index.html#board'; //回到index.html的#board位置
+                } //如果訊息未填寫完成或格式錯誤 則回傳錯誤訊息 並導回表單填寫位置
+                else {
                     location.href =
                         'https://docs.google.com/forms/d/e/1FAIpQLSfcvR3MQCO0z60_P1gsTGBNh-ZMYe4uamRMhqeZbMnuNU6b_Q/formResponse?entry.778177753=' +
                         name +
@@ -148,12 +150,12 @@
                         email +
                         '&entry.902018093=' +
                         msg;
-                }
+                } //若填寫完整 則傳到設定的google表單 表單網址根據"表單客製化.txt"生成
             }
             function back() {
                 location.href = 'index.html';
                 alert('訊息已送出');
-            }
+            } //訊息送出後 回到index.html
         </script>
     </head>
     <body>
@@ -163,9 +165,9 @@
             <div class="row bg-primary">
                 <div class="col text-center py-3">
                     <i class="bg-success rounded-circle fas fa-fist-raised fa-3x iconstyle" id="logo"></i>
-                    <h1 class="text-white">DHS.</h1>
-                    <h3 class="text-white">數位工房</h3>
-                    <h5 class="text-white small">最佳數位內容解決方案</h5>
+                    <h1 class="text-white">資訊工程師</h1>
+                    <h3 class="text-white">郭維安</h3>
+                    <h5 class="text-white small">求職面試中的菜鳥工程師</h5>
                 </div>
             </div>
 
@@ -191,9 +193,9 @@
             <div class="row">
                 <div class="col-sm-4 text-center offset-sm-4 border border-secondary border-left-0 border-right-0 p-0 bg-white">
                     <h2 class="border border-secondary border-left-0 border-right-0 py-3 my-2 h4 font-weight-bold">
-                        我們提供您解決方案<br />
-                        有效率的提升工作品質<br />
-                        與長遠穩定的獲利
+                        程式語言能力<br />
+                        可使用C/C#/JAVA進行開發,維護<br />
+                        並有對其他語言學習挑戰的精神
                     </h2>
                 </div>
             </div>
