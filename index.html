@@ -1,11 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+        <title>DHS.Workstation-web /Graphics / Video-All Resolution</title>
+        <style>
+            #logo {
+                width: 80px;
+                height: 80px;
+                margin: 50px auto;
+                line-height: 80px;
+                color: #fff;
+            }
+            .skew1 {
+                transform: skewY(15deg) translate(0px, -150px);
+                height: 300px;
+                position: relative;
+                z-index: -1;
+                border-right: 1px solid rgba(200, 200, 200, 0.2);
+            }
+            .skew2 {
+                transform: skewY(-15deg) translate(0px, -150px);
+                height: 300px;
+                position: relative;
+                z-index: -1;
+                border-left: 1px solid rgba(200, 200, 200, 0.2);
+            }
+            .skew3 {
+                transform: skewY(15deg) translate(0px, -150px);
+                height: 30px;
+                position: relative;
+                z-index: -1;
+                border-right: 1px solid rgba(200, 200, 200, 0.2);
+            }
+            .skew4 {
+                transform: skewY(-15deg) translate(0px, -150px);
+                height: 30px;
+                position: relative;
+                z-index: -1;
+                border-left: 1px solid rgba(200, 200, 200, 0.2);
+            }
+            .skew5 {
+                transform: skewY(15deg) translate(0px, -150px);
+                height: 30px;
+                position: relative;
+                z-index: -1;
+                border-right: 1px solid rgba(200, 200, 200, 0.2);
+                background-color: lightcyan;
+            }
+            .skew6 {
+                transform: skewY(-15deg) translate(0px, -150px);
+                height: 30px;
+                position: relative;
+                z-index: -1;
+                border-left: 1px solid rgba(200, 200, 200, 0.2);
+                background-color: lightcyan;
+            }
+            .skew7 {
+                transform: skewY(15deg) translate(0px, 150px);
+                height: 300px;
+                position: relative;
+                z-index: -1;
+                border-right: 1px solid rgba(200, 200, 200, 0.2);
+                background-color: lightcyan;
+            }
+            .skew8 {
+                transform: skewY(-15deg) translate(0px, 150px);
+                height: 300px;
+                position: relative;
+                z-index: -1;
+                border-left: 1px solid rgba(200, 200, 200, 0.2);
+                background-color: lightcyan;
+            }
+            .skew9 {
+                transform: skewY(15deg) translate(0px, 150px);
+                height: 30px;
+                position: relative;
+                z-index: -1;
+                border-right: 1px solid rgba(200, 200, 200, 0.2);
+                background-color: lightcyan;
+            }
+            .skew10 {
+                transform: skewY(-15deg) translate(0px, 150px);
+                height: 30px;
+                position: relative;
+                z-index: -1;
+                border-left: 1px solid rgba(200, 200, 200, 0.2);
+                background-color: lightcyan;
+            }
+            .clearResize {
+                resize: none;
+            }
+            .iconstyle {
+                height: 45px;
+                width: 45px;
+                border-radius: 45px;
+                border: 1px solid #fff;
+                line-height: 45px;
+                text-align: center;
+            }
+            #bgline {
+                width: 50%;
+                height: 100%;
+                border-right: 1px solid #ccc;
+                position: fixed;
+                z-index: -1;
+            }
+            input[placeholder]::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                color: white;
+                text-align: center;
+            }
+            textarea[placeholder]::-webkit-input-placeholder {
+                color: white;
+                text-align: center;
+            }
+            /* input[placeholder]::-moz-placeholder { / Firefox 19+ /color: white;} */
+            /* input[placeholder]:-ms-input-placeholder { / IE 10+ /color: white;} */
+        </style>
+        <script type="text/javascript">
+            function send() {
+                var nameElement = document.getElementById('nameinput');
+                var name = nameElement.value;
+                var emailElement = document.getElementById('emailinput');
+                var email = emailElement.value;
+                var msgElement = document.getElementById('msginput');
+                var msg = msgElement.value;
+                // alert(name+email+msg);
+                if (name == '' || email == '' || msg == '' || email.indexOf('@') == -1) {
+                    alert('請輸入訊息');
+                    location.href = 'index.html#board';
+                } else {
+                    location.href =
+                        'https://docs.google.com/forms/d/e/1FAIpQLSfcvR3MQCO0z60_P1gsTGBNh-ZMYe4uamRMhqeZbMnuNU6b_Q/formResponse?entry.778177753=' +
+                        name +
+                        '&entry.483288084=' +
+                        email +
+                        '&entry.902018093=' +
+                        msg;
+                }
+            }
+            function back() {
+                location.href = 'index.html';
+                alert('訊息已送出');
+            }
+        </script>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div id="bgline"></div>
+        <div class="container-fluid">
+            <!-- 第一個區塊 -->
+            <div class="row bg-primary">
+                <div class="col text-center py-3">
+                    <i class="bg-success rounded-circle fas fa-fist-raised fa-3x iconstyle" id="logo"></i>
+                    <h1 class="text-white">DHS.</h1>
+                    <h3 class="text-white">數位工房</h3>
+                    <h5 class="text-white small">最佳數位內容解決方案</h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <!--第一個三角形-->
+                <div class="col bg-primary skew1"></div>
+                <div class="col bg-primary skew2"></div>
+            </div>
+
+            <div class="row">
+                <!--第二個三角形-->
+                <div class="col bg-primary skew3"></div>
+                <div class="col bg-primary skew4"></div>
+            </div>
+
+            <div class="row">
+                <!--第三個三角形-->
+                <div class="col skew5"></div>
+                <div class="col skew6"></div>
+            </div>
+
+            <!-- 第二區塊 -->
+            <div class="row">
+                <div class="col-sm-4 text-center offset-sm-4 border border-secondary border-left-0 border-right-0 p-0 bg-white">
+                    <h2 class="border border-secondary border-left-0 border-right-0 py-3 my-2 h4 font-weight-bold">
+                        我們提供您解決方案<br />
+                        有效率的提升工作品質<br />
+                        與長遠穩定的獲利
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 第三區塊 -->
+            <div class="row my-5">
+                <div class="col-12 col-md-4 offset-md-2">
+                    <img src="images/1.jpg" alt="" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="h5">平面設計</h3>
+                    <p class="h6 text-justify">
+                        美學是個重要的學問，我們對外在的事物存在著主觀的衝擊與印象的深刻。透過傾聽與理解，設計師將為您量身訂做符合您期待的視覺美學。
+                    </p>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-12 col-md-4 offset-md-2">
+                    <h3 class="h5">網頁設計</h3>
+                    <p>
+                        透過適合的載體平台，才能有效傳達訊息獲得更多的利益.視覺與前後端的組合，提供的不是廉價的商品，而是符合現今主流且可以真正幫您獲利的網站。
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="images/2.jpg" alt="" class="img-fluid" />
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-12 col-md-4 offset-md-2">
+                    <img src="images/3.jpg" alt="" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="h5">剪輯與特效</h3>
+                    <p>
+                        訊息的傳達由2D平面轉變成多元空間的組合.不只是文字、影像與聲音，我們將透過特效的組合與剪輯的魅力，創作出一部部令人印象深刻的影音之作。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 第四區塊 -->
+            <div class="row">
+                <div class="col-sm-4 text-center offset-sm-4 border border-secondary border-left-0 border-right-0 p-0 bg-white">
+                    <h3 class="font-weight-bold my-2 border border-secondary border-left-0 border-right-0 border-bottom-0 py-3">取得更多服務</h3>
+                    <p class="small text-justify my-3">
+                        除了視覺的專案服務外，我們也提供教育訓練、活動企劃、專案輔導等項目. 也歡迎大家加入我們這個大家庭。
+                    </p>
+                    <button class="btn btn-info text-white btn-sm">加入我們</button>
+                    <span class="d-block mt-3 border border-secondary border-left-0 border-right-0 border-bottom-0" style="height: 9px"></span>
+                </div>
+            </div>
+            &emsp;&nbsp;
+
+            <div class="row">
+                <div class="col skew9"></div>
+                <div class="col skew10"></div>
+            </div>
+            <div class="row">
+                <div class="col skew7 bg-primary"></div>
+                <div class="col skew8 bg-primary"></div>
+            </div>
+            <div class="row badge-primary">
+                <div class="col-12 col-md-6 offset-md-3 text-center">
+                    <h3 class="font-weight-bold mb-3 border border-left-0 border-right-0 border-bottom-0 pt-2">問題與討論</h3>
+                    <p class="small my-2">除了專案服務外，我們也提供線上諮詢服務，歡迎您留下訊息。</p>
+                    <iframe
+                        src=""
+                        name="hidden_area"
+                        frameborder="0"
+                        style="display: none"
+                        onload="this.onload=function(){window.location.href='index.html';back();}"
+                    ></iframe>
+                    <a href="" name="board"></a>
+                    <form method="post" target="hidden_area">
+                        <div class="row">
+                            <div class="col-12 col-md-6 my-2">
+                                <input
+                                    type="text"
+                                    placeholder="請輸入姓名(*為必填欄位)"
+                                    required
+                                    class="form-control bg-transparent text-white"
+                                    id="nameinput"
+                                />
+                            </div>
+                            <div class="col-12 col-md-6 my-2">
+                                <input
+                                    type="email"
+                                    placeholder="請輸入電子信箱(*為必填欄位)"
+                                    required
+                                    class="form-control bg-transparent text-white"
+                                    id="emailinput"
+                                />
+                            </div>
+                            <div class="col-12 my-2">
+                                <textarea
+                                    name=""
+                                    id="msginput"
+                                    placeholder="請輸入內容(*最多200字)"
+                                    maxlength="200"
+                                    class="form-control bg-transparent text-white clearResize"
+                                    rows="8"
+                                ></textarea>
+                            </div>
+                            <div class="col-12 my-2">
+                                <input type="submit" value="送出訊息" class="btn btn-sm btn-success" onclick="send()" />
+                            </div>
+                        </div>
+                    </form>
+                    <i class="fab fa-facebook-square fa-2x iconstyle"></i>&emsp; <i class="fab fa-twitter-square fa-2x iconstyle"></i>&emsp;
+                    <i class="fab fa-instagram fa-2x iconstyle"></i>&emsp; <i class="fab fa-google-plus-square fa-2x iconstyle"></i>&emsp;
+                    <i class="fab fa-youtube fa-2x iconstyle"></i>&emsp;
+                    <i class="fab fa-reddit-square fa-2x iconstyle"></i>
+                    <p>&copy;Allrights reserved | Design:YOUR LOGO 2020</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+-->
     </body>
 </html>
